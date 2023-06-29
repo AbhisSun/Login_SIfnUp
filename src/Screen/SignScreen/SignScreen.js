@@ -3,7 +3,7 @@ import React from 'react';
 import CustomInput from '../../Components/CustomInput/CustomInput';
 import { useState } from 'react';
 import CustomButton from '../../Components/CustomInput/CustomButton/CustomButton.js';
-import Logo from '../../../assets/images/Logo_1.png'
+import Logo from '../../../assets/images/download.jpeg'
 import {useNavigation} from '@react-navigation/native'
 import {useForm} from 'react-hook-form'
 
@@ -29,8 +29,8 @@ const SignInScreen = () => {
   }
 
   return (
-    <ScrollView>
-      <View style={Styles.root}>
+    <ScrollView style={Styles.root}>
+      <View  style={Styles.center}>
         <Image source={Logo} style={[Styles.logo, { height: height * 0.3 }]} />
         <CustomInput name="Email" placeholder="Email" control={control} rules={{required:'Email is Reequired'}} />
         <CustomInput name="Password" placeholder="Password" secureTextEntry control={control} rules={{required:'Password is Reequired',minLength:{value:8 ,message:'Password should be 3 char'}}}/>
@@ -44,14 +44,19 @@ const SignInScreen = () => {
 }
 const Styles = StyleSheet.create({
   root: {
-    alignItems: 'center',
+    // alignItems: 'center',
     padding: 20,
+    backgroundColor:'white'
+  },
+  center:{
+    alignItems:"center"
   },
   logo: {
     width: '70%',
     maxWidth: 300,
     maxHeight: 200,
-    resizeMode: 'contain'
+    resizeMode: 'contain',
+    // backgroundColor:'white'
   }
 })
 

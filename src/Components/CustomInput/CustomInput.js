@@ -10,7 +10,7 @@ const CustomInput = ({ control, name, rules={}, placeholder, secureTextEntry }) 
       rules={rules}
       render={({ field: { value, onChange, onBlur }, fieldState: {error} }) => (
         <>
-        <View style={[styles.container,{borderColor: error?'red':'#e8e8e8'}]}>
+        <View style={[styles.container,{borderColor: error?'red':'#0B0705'}]}>
           <TextInput
             style={styles.input}
             value={value}
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     height: 50,
     width: '100%',
-    borderColor: '#e8e8e8',
+    borderColor: '#0B0705',
     borderWidth: 1,
     borderRadius: 5,
 
